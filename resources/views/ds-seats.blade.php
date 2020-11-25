@@ -6,14 +6,14 @@
  <div class="container-fluid">
  					
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">TABLES MANAGERS</h1>
+                    <h1 class="h3 mb-2 text-gray-800">TABLES SEATS</h1>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Managers List</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Seats List</h6>
                         </div>
-                        <a href="{{route ('them-moi-staffs')}}" class="btn btn-success btn-icon-split">
+                        <a href="{{route ('them-moi-seats')}}" class="btn btn-success btn-icon-split">
 
                                         <span class="text">NEW</span>
                         </a>
@@ -22,22 +22,18 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Phone</th>
-                                            <th>Password</th>
-                                            <th>FisrtName</th>
-                                            <th>LastName</th>
+                                            <th>Id</th>
+                                            <th>CinemaId</th>
+                                            <th>Name</th>
                                             <th>Status</th>
                                             <th></th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                           <th>ID</th>
-                                            <th>Phone</th>
-                                            <th>Password</th>
-                                            <th>FisrtName</th>
-                                            <th>LastName</th>
+                                           <th>Id</th>
+                                            <th>CinemaId</th>
+                                            <th>Name</th>
                                             <th>Status</th>
                                             <th></th>
                                         </tr>
@@ -46,10 +42,8 @@
                                     	@for($i=1;$i<101;$i++)
                                         <tr>
                                             <td>{{$i}}</td>
-                                            <td>123456789</td>
-                                            <td>dung {{$i}}</td>
-                                            <td>Lê</td>
-                                            <td>Thanh Dũng</td>
+                                            <td>{{$i}}</td>
+                                            <td>quận 7</td>
                                             <td>hoạt động</td>
                                             <td>
                                             	<a href="#" class="btn btn-info btn-circle">

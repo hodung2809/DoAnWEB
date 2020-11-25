@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateScreeningsTable extends Migration
+class CreateCinemasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateScreeningsTable extends Migration
      */
     public function up()
     {
-        Schema::create('screenings', function (Blueprint $table) {
+        Schema::create('cinemas', function (Blueprint $table) {
             $table->increments("id");
-            $table->integer("movie_id")->unsigned()->index();
-            $table->integer("cinema_id")->unsigned()->index();
-            $table->foreign("movie_id")->references("id")->on("movies");
-            $table->foreign("cinema_id")->references("id")->on("cinemas");
-            $table->time("time");
+            $table->string("name");
+            $table->integer("seat_quantity");
+            $table->integer("branch_id")->unsigned()->index();
+            $table->foreign("branch_id")->references("id")->on("branches");
             $table->boolean("status");
             $table->timestamps();
         });
@@ -32,6 +31,6 @@ class CreateScreeningsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('screenings');
+        Schema::dropIfExists('cinemas');
     }
 }

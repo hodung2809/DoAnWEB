@@ -25,6 +25,7 @@
                                             <th>ID</th>
                                             <th>Name</th>
                                             <th>Adress</th>
+                                            <th>ManagersId</th>
                                             <th>Status</th>
                                             <th></th>
                                         </tr>
@@ -34,6 +35,7 @@
                                            <th>ID</th>
                                             <th>Name</th>
                                             <th>Adress</th>
+                                            <th>ManagersId</th>
                                             <th>Status</th>
                                             <th></th>
                                         </tr>
@@ -44,6 +46,7 @@
                                             <td>{{$i}}</td>
                                             <td>dung</td>
                                             <td>quận 7</td>
+                                            <td>{{$i}}</td>
                                             <td>hoạt động</td>
                                             <td>
                                             	<a href="#" class="btn btn-info btn-circle">

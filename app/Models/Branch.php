@@ -10,11 +10,9 @@ class Branch extends Model
     protected $fillable = [
         'name',
         'address',
+        'manager_id', 
         'status',
         ];
-    public function cinema_branch()
-    {
-        return $this->hasOne('Models\Cinema','branch_id','id');
-    }
-        
+    public function manager_branch(){
+        return $this->belongsTo('Models\Manager','manager_id');
 }

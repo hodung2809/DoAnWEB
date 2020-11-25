@@ -23,6 +23,8 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
+                                            <th>FisrtName</th>
+                                            <th>LastName</th>
                                             <th>PHONE</th>
                                             <th>PASSWORD</th>
                                             <th>BRTHDAY</th>
@@ -32,7 +34,9 @@
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                           <th>ID</th>
+                                            <th>ID</th>
+                                            <th>FisrtName</th>
+                                            <th>LastName</th>
                                             <th>PHONE</th>
                                             <th>PASSWORD</th>
                                             <th>BRTHDAY</th>
@@ -44,7 +48,9 @@
                                     	@for($i=1;$i<101;$i++)
                                         <tr>
                                             <td>{{$i}}</td>
-                                            <td>Lê Thanh Dũng</td>
+                                            <td>Lê</td>
+                                            <td>Thanh Dũng</td>
+                                            <td>123456</td>
                                             <td>dung@123</td>
                                             <td>08/02/2000</td>
                                             <td>hoạt động</td>

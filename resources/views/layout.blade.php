@@ -102,17 +102,17 @@
                         
                         <a class="collapse-item" href="{{route ('dsUser')}}">Users</a>
                         <a class="collapse-item" href="{{route ('dsVoices')}}">Invoices</a>
-                        <a class="collapse-item" href="{{route ('dsStaffs')}}">Staffs</a>
+                        <a class="collapse-item" href="{{route ('dsStaffs')}}">Managers</a>
                         <a class="collapse-item" href="{{route ('dsBranchs')}}">Branchs</a>
-                        <a class="collapse-item" href="blank.html">InvoieDetails</a>
-                        <a class="collapse-item" href="blank.html">Tickets</a>
-                        <a class="collapse-item" href="blank.html">Seats</a>
-                        <a class="collapse-item" href="blank.html">Screenings</a>
-                        <a class="collapse-item" href="blank.html">Cinemas</a>
-                        <a class="collapse-item" href="blank.html">Movies</a>
-                        <a class="collapse-item" href="blank.html">Countries</a>
-                        <a class="collapse-item" href="blank.html">MovieTypes</a>
-                        <a class="collapse-item" href="blank.html">ActorslnMovies</a>
+                        <a class="collapse-item" href="{{route ('dsInvoiceDetail')}}">InvoieDetails</a>
+                        <a class="collapse-item" href="{{route ('dsTickets')}}">Tickets</a>
+                        <a class="collapse-item" href="{{route ('dsSeats')}}">Seats</a>
+                        <a class="collapse-item" href="{{route ('dsSreenings')}}">Screenings</a>
+                        <a class="collapse-item" href="{{route ('dsCinemas')}}">Cinemas</a>
+                        <a class="collapse-item" href="{{route ('dsMovies')}}">Movies</a>
+                        <a class="collapse-item" href="{{route ('dsCountrys')}}">Countries</a>
+                        <a class="collapse-item" href="{{route ('dsMoviesTypes')}}">MovieTypes</a>
+                        <a class="collapse-item" href="{{route ('dsActorslnMovies')}}">ActorslnMovies</a>
                     </div>
                 </div>
             </li>
