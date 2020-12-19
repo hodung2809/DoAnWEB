@@ -18,7 +18,6 @@ class CreateInvoiceDetailsTable extends Migration
             $table->integer("ticket_id")->unsigned()->index();
             $table->foreign("invoice_id")->references("id")->on("invoices");
             $table->foreign("ticket_id")->references("id")->on("tickets");
-            $table->integer("quantity");
             $table->boolean("status");
             $table->timestamps();
         });

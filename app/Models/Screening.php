@@ -13,13 +13,13 @@ class Screening extends Model
         'time',
         'status',
         ];
-    public function ticket_screening(){
-        return $this->hasMany('Models\Ticket','screening_id','id');
+    public function Ticket(){
+        return $this->hasMany(Ticket::class);
     }
-    public function movie_screening(){
-        return $this->belongsTo('Models\Movie','movie_id');
+    public function Movie(){
+        return $this->belongsTo(Movie::class);
     }
-    public function cinema_screening(){
-        return $this->belongsTo('Models\Cinema','cinema_id');
+    public function Cinema(){
+        return $this->belongsTo(Cinema::class);
     }
 }

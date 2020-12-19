@@ -21,8 +21,11 @@ class CreateMoviesTable extends Migration
             $table->foreign("movie_type_id")->references("id")->on("movie_types");
             $table->foreign('country_id')->references('id')->on('countries');
             $table->string("director");
+            $table->string('image');
             $table->time("length");
             $table->date("opening_day");
+            $table->string("trailer");
+            $table->integer("price");
             $table->boolean("status");
             $table->timestamps();
         });

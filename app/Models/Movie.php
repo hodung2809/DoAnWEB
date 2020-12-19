@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\MovieType;
+use App\Models\Country;
 
 class Movie extends Model
 {
@@ -13,13 +15,22 @@ class Movie extends Model
         'country_id',
         'dicector', 
         'length',
+        'trailer',
+        'image',
+        'price',
         'opening_day',
         'status',
         ];
-    public function movietype_movie(){
-        return $this->belongsToMany('Models\MovieType','movie_type_id');
+    public function MovieType(){
+        return $this->belongsTo(MovieType::class);
     }
-    public function country_movie(){
-        return $this->belongsTo('Models\Country','country_id');
+    public function Country(){
+        return $this->belongsTo(MovieType::class);
+    }
+    public function Comment(){
+        return $this->hasMany(Comment::class);
+    }
+    public function Screening(){
+        return $this->hasMany(Screening::class);
     }
 }

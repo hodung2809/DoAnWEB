@@ -13,14 +13,14 @@
 
     <!-- Custom fonts for this template-->
     
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="{{url('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="{{url('css/sb-admin-2.min.css')}}" rel="stylesheet">
+    <link href="{{url('vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
 
 </head>
 
@@ -100,19 +100,20 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                      <div class="bg-white py-2 collapse-inner rounded">
                         
-                        <a class="collapse-item" href="{{route ('dsUser')}}">Users</a>
-                        <a class="collapse-item" href="{{route ('dsVoices')}}">Invoices</a>
-                        <a class="collapse-item" href="{{route ('dsStaffs')}}">Managers</a>
-                        <a class="collapse-item" href="{{route ('dsBranchs')}}">Branchs</a>
-                        <a class="collapse-item" href="{{route ('dsInvoiceDetail')}}">InvoieDetails</a>
-                        <a class="collapse-item" href="{{route ('dsTickets')}}">Tickets</a>
-                        <a class="collapse-item" href="{{route ('dsSeats')}}">Seats</a>
-                        <a class="collapse-item" href="{{route ('dsSreenings')}}">Screenings</a>
-                        <a class="collapse-item" href="{{route ('dsCinemas')}}">Cinemas</a>
-                        <a class="collapse-item" href="{{route ('dsMovies')}}">Movies</a>
-                        <a class="collapse-item" href="{{route ('dsCountrys')}}">Countries</a>
-                        <a class="collapse-item" href="{{route ('dsMoviesTypes')}}">MovieTypes</a>
-                        <a class="collapse-item" href="{{route ('dsActorslnMovies')}}">ActorslnMovies</a>
+                        <a class="collapse-item" href="{{route ('user.index')}}">Người dùng</a>
+                        <a class="collapse-item" href="{{route ('invoice.index')}}">Hóa Đơn</a>
+                        <a class="collapse-item" href="{{route ('manager.index')}}">Quản Lý</a>
+                        <a class="collapse-item" href="{{route ('branch.index')}}">Chi Nhánh</a>
+                        <a class="collapse-item" href="{{route ('invoicedetail.index')}}">Chi Tiết Hóa Đơn</a>
+                        <a class="collapse-item" href="{{route ('ticket.index')}}">Vé</a>
+                        <a class="collapse-item" href="{{route ('seat.index')}}">Ghế</a>
+                        <a class="collapse-item" href="{{route ('screening.index')}}">Xuất chiếu</a>
+                        <a class="collapse-item" href="{{route ('cinema.index')}}">Rạp</a>
+                        <a class="collapse-item" href="{{route ('movie.index')}}">Phim</a>
+                        <a class="collapse-item" href="{{route ('country.index')}}">Quốc Gia</a>
+                        <a class="collapse-item" href="{{route ('movietype.index')}}">Loại Phim</a>
+                        <a class="collapse-item" href="{{route ('actor.index')}}">Diễn Viên</a>
+                        <a class="collapse-item" href="{{route ('comment.index')}}">Đánh giá</a>
                     </div>
                 </div>
             </li>
@@ -307,27 +308,16 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
+                                
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="{{route ('login')}}">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -349,7 +339,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>KHC 2D &copy; Our Website Film</span>
                     </div>
                 </div>
             </footer>
@@ -386,26 +376,26 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{url('vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{url('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="{{url('vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+    <script src="{{url('js/sb-admin-2.min.js')}}"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="{{url('vendor/chart.js/Chart.min.js')}}"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
-    <script src="js/demo/chart-bar-demo.js"></script>
+    <script src="{{url('js/demo/chart-area-demo.js')}}"></script>
+    <script src="{{url('js/demo/chart-pie-demo.js')}}"></script>
+    <script src="{{url('js/demo/chart-bar-demo.js')}}"></script>
 
-     <script src="js/demo/datatables-demo.js"></script>
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+     <script src="{{url('js/demo/datatables-demo.js')}}"></script>
+    <script src="{{url('vendor/datatables/jquery.dataTables.min.js')}}"></script>
+    <script src="{{url('vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
 </body>
 
 </html>

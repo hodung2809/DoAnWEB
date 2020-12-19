@@ -8,11 +8,15 @@ class Branch extends Model
 {
     //
     protected $fillable = [
-        'name',
+        'name', 
         'address',
         'manager_id', 
         'status',
         ];
-    public function manager_branch(){
-        return $this->belongsTo('Models\Manager','manager_id');
+        public function Manager(){
+            return $this->belongsTo(Manager::class);
+        }
+        public function Cinema(){
+            return $this->hasMany(Cinema::class);
+        }
 }

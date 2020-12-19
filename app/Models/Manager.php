@@ -14,6 +14,8 @@ class Manager extends Model
         'last_name',
         'status',
         ];
-    public function branch_manager(){
-        return $this->hasOne('Models\Branch','manager_id','id');
+        public function Branch(){
+            return $this->hasOne(Branch::class);
+        }
+
 }

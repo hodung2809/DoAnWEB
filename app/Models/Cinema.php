@@ -13,13 +13,13 @@ class Cinema extends Model
         'branch_id',
         'status',
         ];
-    public function branch_cinema(){
-        return $this->belongsTo('Models\Branch','branch_id');
+    public function Branch(){
+        return $this->belongsTo(Branch::class);
     }
-    public function screening_cinema(){
-        return $this->hasMany('Models\Screening','cinema_id','id');
+    public function Screening(){
+        return $this->hasMany(Screening::class);
     }
-    public function seat_cinema(){
-        return $this->hasMany('Models\Screening','cinema_id','id');
+    public function Seat(){
+        return $this->hasMany(Seat::class);
     }
 }

@@ -12,7 +12,7 @@ class Actor extends Model
         'actor_name',
         'status',
         ];
-    public function movie_actor(){
-        return $this->belongsTo('Models\Movie','movie_id');
+    public function Movie(){
+        return $this->belongsTo(Movie::class);
     }
 }

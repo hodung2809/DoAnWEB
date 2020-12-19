@@ -8,14 +8,14 @@ class Seat extends Model
 {
     //
     protected $fillable = [
-        'cinema_id',
         'name',
+        'cinema_id',
         'status',
         ];
-    public function ticket_seat(){
-        return $this->hasOne('Models\Seat','seat_id','id');
+    public function Ticket(){
+        return $this->hasOne(Ticket::class);
     }
-    public function cinema_seat(){
-        return $this->belongsTo('Models\Cinema','cinema_id');
+    public function Cinema(){
+        return $this->belongsTo(Cinema::class);
     }
 }

@@ -44,7 +44,10 @@ class User extends Authenticatable
         'birthday',
         'status',
         ];
-    public function invoice_user(){
-        return $this->hasMany('Models\User','user_id','id');
+    public function Invoice(){
+        return $this->hasMany(Invoice::class);
+    }
+    public function Comment(){
+        return $this->hasMany(Comment::class);
     }
 }

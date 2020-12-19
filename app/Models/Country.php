@@ -6,13 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Country extends Model
 {
+    protected $primaryKey="id";
+    protected $table="countries";
     //  
     protected $fillable = [
         'name',
         'status',
         ];
-    public function movie_country()
+    public function Movie()
     {
-        return $this->belongsTo('Models\Movie','movie_id');
+        // return $this->hasMany('Models\Movie','movie_id','id');
+        return $this->hasMany(Movie::class);
     }
 }
