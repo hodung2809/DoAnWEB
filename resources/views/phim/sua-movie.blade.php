@@ -29,9 +29,8 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control " id="exampleRepeatPassword" name="director" placeholder="Đạo diễn" value="{{$Movie->director}}">
-                                        <span class="text-danger">{{$errors->first('director')}}</span>
+                                    <div class="col-sm-6 mb-3 mb-sm-2">
+                                            <input type="file" class="form-control" id="exampleInputPassword" name="image" value="{{$Movie->image}}">
                                     </div>
                                 </div>
 
@@ -73,6 +72,12 @@
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control" id="exampleRepeatPassword"name="price" placeholder="Giá tiền" value="{{$Movie->price}}">
                                         <span class="text-danger">{{$errors->first('price')}}</span>           
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control " id="exampleRepeatPassword" name="director" placeholder="Đạo diễn" value="{{$Movie->director}}">
+                                        <span class="text-danger">{{$errors->first('director')}}</span>
                                     </div>
                                 </div>
                                 <button class="btn btn-primary btn-user btn-block">
